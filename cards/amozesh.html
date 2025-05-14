@@ -16,6 +16,208 @@
   <script src="https://cdn.ckeditor.com/ckeditor5/39.0.1/classic/translations/fa.js"></script>
 
   <style>
+      /* استایل لیست‌ها داخل ادیتور CKEditor */
+.ck-content ul {
+  list-style: disc outside;
+  padding-right: 1.5rem;
+  margin: 1em 0;
+}
+
+.ck-content ol {
+  list-style: decimal outside;
+  padding-right: 1.5rem;
+  margin: 1em 0;
+}
+
+.ck-content a {
+  color: #3b82f6;
+  text-decoration: underline;
+}
+
+.ck-content img {
+  max-width: 100%;
+  height: auto;
+  margin: 0.5em 0;
+  display: block;
+}
+
+.ck-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.ck-content th,
+.ck-content td {
+  border: 1px solid #ccc;
+  padding: 0.5rem;
+  text-align: center;
+}
+.ck-content b, 
+.ck-content strong {
+  font-weight: bold;
+}
+
+.ck-content i, 
+.ck-content em {
+  font-style: italic;
+}
+
+.ck-content blockquote,
+.ck-content .indent {
+  margin-right: 2rem;
+}
+
+.ck-content .outdent {
+  margin-right: 0;
+}
+
+.ck-content figure {
+  margin: 1rem 0;
+  text-align: center;
+}
+
+.ck-content video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1rem 0;
+}
+    /* استایل‌های مختلف برای محتوا */
+    body {
+      font-family: 'Vazir', sans-serif;
+    }
+  #editor ul {
+  list-style: disc outside;
+  padding-right: 1.5rem;
+  margin: 1em 0;
+}
+#editor ol {
+  list-style: decimal outside;
+  padding-right: 1.5rem;
+  margin: 1em 0;
+}
+#editor a {
+  color: #3b82f6;
+  text-decoration: underline;
+}
+#editor img {
+  max-width: 100%;
+  height: auto;
+  margin: 0.5em 0;
+  display: block;
+}
+#editor table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+#editor table,
+#editor th,
+#editor td {
+  border: 1px solid #ccc;
+}
+#editor th,
+#editor td {
+  padding: 0.5rem;
+  text-align: center;
+}
+#editor b, 
+#editor strong {
+  font-weight: bold;
+}
+
+#editor i, 
+#editor em {
+  font-style: italic;
+}
+
+#editor blockquote,
+#editor .indent {
+  margin-right: 2rem;
+}
+
+#editor .outdent {
+  margin-right: 0;
+}
+    .preview-content {
+      white-space: normal;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      line-height: 2;
+      text-align: justify;
+      direction: rtl;
+      font-size: 1rem;
+      color: #374151;
+    }
+    .preview-content ul {
+      list-style: disc outside;
+      padding-right: 1.5rem;
+      margin: 1em 0;
+    }
+    .preview-content ol {
+      list-style: decimal outside;
+      padding-right: 1.5rem;
+      margin: 1em 0;
+    }
+    .preview-content a {
+      color: #3b82f6;
+      text-decoration: underline;
+    }
+    .preview-content img {
+      max-width: 100%;
+      height: auto;
+      margin: 0.5em 0;
+      display: block;
+    }
+    .preview-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+    }
+    .preview-content th,
+    .preview-content td {
+      border: 1px solid #ccc;
+      padding: 0.5rem;
+      text-align: center;
+    }
+    .preview-content b, 
+    .preview-content strong {
+      font-weight: bold;
+    }
+    .preview-content i, 
+    .preview-content em {
+      font-style: italic;
+    }
+    .preview-content blockquote,
+    .preview-content .indent {
+      margin-right: 2rem;
+    }
+    .preview-content .outdent {
+      margin-right: 0;
+    }
+    .preview-content figure {
+      margin: 1rem 0;
+      text-align: center;
+    }
+    .preview-content video {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 1rem 0;
+    }
+
+    .download-btn {
+      background-color: #4CAF50;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 9999px;
+      font-size: 1rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .download-btn:hover {
+      background-color: #45a049;
+    }
     /* استایل ادیتور */
     .ck-content ul { list-style: disc outside; padding-right: 1.5rem; margin: 1em 0; }
     .ck-content ol { list-style: decimal outside; padding-right: 1.5rem; margin: 1em 0; }
