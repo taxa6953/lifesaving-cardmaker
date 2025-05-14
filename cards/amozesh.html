@@ -113,7 +113,7 @@
             <input type="checkbox" id="useImage" class="mr-2">
             استفاده از تصویر
           </label>
-          <input type="number" id="imageNumber" class="w-full border border-gray-300 rounded px-3 py-2" placeholder="مثلاً: 9" min="1" />
+          <input type="number" id="imageNumber" class="w-full border border-gray-300 rounded px-3 py-2" placeholder="مثلاً: picture.png" min="1" />
         </div>
 
         <!-- فیلم -->
@@ -122,7 +122,7 @@
             <input type="checkbox" id="useVideo" class="mr-2">
             استفاده از فیلم
           </label>
-          <input type="number" id="videoNumber" class="w-full border border-gray-300 rounded px-3 py-2" placeholder="مثلاً: 3" min="1" />
+          <input type="number" id="videoNumber" class="w-full border border-gray-300 rounded px-3 py-2" placeholder="مثلاً: video.mp4" min="1" />
         </div>
 
         <!-- ویس -->
@@ -131,7 +131,7 @@
             <input type="checkbox" id="useAudio" class="mr-2">
             استفاده از ویس
           </label>
-          <input type="number" id="audioNumber" class="w-full border border-gray-300 rounded px-3 py-2" placeholder="مثلاً: 5" min="1" />
+          <input type="number" id="audioNumber" class="w-full border border-gray-300 rounded px-3 py-2" placeholder="مثلاً: voice.mp3" min="1" />
         </div>
 
         <label class="block mb-2">محتوا:</label>
@@ -216,13 +216,13 @@
       if (document.getElementById('useImage').checked && imageNum) {
         mediaElement = `
           <div class="aspect-w-16 aspect-h-9">
-            <img src="../../assets/images/amozesh/image-card${imageNum}.png" alt="تصویر کارت" class="w-full h-full object-cover rounded-t-3xl" />
+            <img src="../../assets/images/amozesh/${imageNum}" alt="تصویر کارت" class="w-full h-full object-cover rounded-t-3xl" />
           </div>`;
       } else if (document.getElementById('useVideo').checked && videoNum) {
         mediaElement = `
           <div class="aspect-w-16 aspect-h-9">
             <video controls class="w-full h-full object-cover rounded-t-3xl">
-              <source src="../../assets/images/amozesh/video-card${videoNum}.mp4" type="video/mp4">
+              <source src="../../assets/images/amozesh/${videoNum}" type="video/mp4">
               مرورگر شما از ویدیو پشتیبانی نمی‌کند.
             </video>
           </div>`;
@@ -232,7 +232,7 @@
       if (document.getElementById('useAudio').checked && audioNum) {
         audioElement = `
           <audio controls class="block w-full max-w-screen-lg mx-auto mt-4 mb-4">
-            <source src="../../assets/images/amozesh/voice${audioNum}.mp3" type="audio/mpeg">
+            <source src="../../assets/images/amozesh/${audioNum}" type="audio/mpeg">
             مرورگر شما از صدا پشتیبانی نمی‌کند.
           </audio>`;
       }
